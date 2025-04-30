@@ -522,22 +522,26 @@ pfrac_oxidw = 0.06 ;
 
 
 %%%% PWA Scenarios
-
-%amp Scenario I
-%amplification_factor = interp1qr([-600 -460 -458 -456 -447 -445 -443 -410 -409 -407 -380 -378 -376 -374 -372 -370 -367 -364 -354 -352 0]',[1 1 1.2 1 1 1.5 1 1 1.5 1 1 1.2 1 1 3 2 3 2 3 1 2 0.8 1 1]',t_geol) ;
-
-%amp SCENARIO II - chosen for final run
-%amplification_factor = interp1qr([-600 -460 -458 -455 -447 -445 -442 -380 -378 -376 -374 -370 0]',[1 1 1.4 1 1 2 1 1 1.8 2.5 3 1 1]',t_geol) ;
-
-%as sw is 3 and sw affects pw, experimental PWEF is divided by experimental SWEF
+%as sw is 3 and sw affects pw, scenarios informed by experimental PWEF are divided by sw parameters informed by experimental SWEF
 
 %PWEF = 180/3 ; - doesn't work
+%PWEF = 100/3 ; - doesn't work
+%PWEF = 50/3 ; - doesn't work
 
+%Scenario I
 %PWEF = 20/3 ;
 
+%Scenario II
 %PWEF = 10/3 ;
 
-PWEF = 5/3 ;
+%Scenario III
+%PWEF = 8/3 ;
+
+%Scenario VI
+%PWEF = 6/3 ;
+
+%Scenario V - most stable against marine SO4 and C13
+PWEF = 4/3 ;
 
 amplification_factor = interp1qr([-600 -480 -380 0]',[1/PWEF 1/PWEF 1 1]',t_geol) ;
 

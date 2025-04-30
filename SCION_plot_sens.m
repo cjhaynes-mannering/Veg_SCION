@@ -28,7 +28,7 @@ tic
 figure('Color',[0.80 0.80 0.70])
 
 %%%% load geochem data
-load('data/geochem_data_2020.mat')
+load('geochem_data_2020.mat')
 
 %%%% make column vector
 sens.time_myr = sens.time_myr(:,1) ;
